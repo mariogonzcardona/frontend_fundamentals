@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mario Alejandro Gonzalez Cardona</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="/">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="#">Clientes</a>
+        <a href="contacto.html">Contactos</a>
+    </nav>
+
+    <section>
+        <h2>Contacto</h2>
+        <h2 class="fw-300 centrar-texto">Llena formulario de contacto</h2>
+        <form class="contacto" action="">
+            <fieldset>
+                <legend>Hola como estas</legend>
+            </fieldset>
+            <!-- Informacion Personal -->
+            <fieldset>
+                <legend>Informacion Personal</legend>
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" placeholder="Tu Nombre" required>
+
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" placeholder="Tu Correo Electronico" required>
+
+                <label for="phone">Telefono: </label>
+                <input type="tel" id="phone" placeholder="Tu Telefono" required>
+
+                <label for="message">Mensaje: </label>
+                <textarea name="mensaje" id="message" cols="30" rows="10"
+                    placeholder="Introduce el texto aqui:"></textarea>
+            </fieldset>
+
+            <!-- Informacion Sobre Propiedad -->
+            <fieldset>
+                <legend>Informacion sobre Propiedad</legend>
+                <label for="options" Vende o Compra></label>
+                <select name="opciones" id="option">
+                    <option value="" disabled selected>--Seleccione--</option>
+                    <option value="Compra">Compra</option>
+                    <option value="Vende">Vende</option>
+                </select>
+
+                <label for="count">Cantidad: </label>
+                <input type="number" min="0" max="20" step="5">
+            </fieldset>
+
+            <!-- Informacion Sobre contacto -->
+            <fieldset>
+                <legend>Contacto</legend>
+                <p>Como desea ser contactado: </p>
+                <div class="forma-contacto">
+                    <label for="phone2">Telefono</label>
+                    <input type="radio" id="phone2" name="contact" value="phone">
+
+                    <label for="email2">E-mail</label>
+                    <input type="radio" id="email2" name="contact" value="email">
+               </div>
+
+                <p>Elija del Menu</p>
+                <div class="forma-contacto">
+                    <input type="checkbox" name="order" value="burguer">Hamburguesa
+                    <input type="checkbox" name="order" value="chips">Papas
+                    <input type="checkbox" name="order" value="beer">Cerveza
+                </div>
+
+                <p>Si eligio Telefono eliga la Fecha y Hora</p>
+                <label for="date">Fecha: </label>
+                <input type="date" name="datetime" id="date">
+
+                <label for="hour">Hora: </label>
+                <input type="time" name="datetime" id="hour" min="09:00" max="18:00">
+
+            </fieldset>
+            <input type="submit" value="Enviar" class="boton boton-verde">
+        </form>
+    </section>
+</body>
+</html>

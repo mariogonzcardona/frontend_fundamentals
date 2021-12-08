@@ -1,0 +1,50 @@
+/* Pseudoselectores */
+:root{
+    --blanco: #fff; /* Custom properties */
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #06e0f8;
+    --gris: #757575;
+    --fuente-principal:3.8rem;
+}
+
+html{
+	font-size: 62.5%;
+}
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: "Krub", sans-serif;
+}
+.titulo{
+	text-align: center;
+    /* font-size: var(--fuente-principal);  Opcional para tener mayor control al modificar*/
+    font-size: 3.8rem;
+}
+.titulo span{
+	font-size: 2rem;
+}
+
+/* Navegacion principal */
+.contenedor{
+    width: 120rem; /* 120rem = 1200px */
+    margin: 0 auto;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal{
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+    background-color: var(--primario);
+}

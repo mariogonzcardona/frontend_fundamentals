@@ -10,25 +10,58 @@
 
 html{
 	font-size: 62.5%;
+    box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
     font-size: 16px; /* 1rem = 10px */
     font-family: "Krub", sans-serif;
 }
-.titulo{
-	text-align: center;
-    /* font-size: var(--fuente-principal);  Opcional para tener mayor control al modificar*/
+
+h1{
     font-size: 3.8rem;
 }
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
 .titulo span{
 	font-size: 2rem;
 }
 
-/* Navegacion principal */
+/* Globales */
 .contenedor{
     max-width: 120rem; /* 120rem = 1200px */
     margin: 0 auto;
 }
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 90%;
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -59,3 +92,38 @@ body{
         justify-content: space-between;
     }
 }
+
+/* Inicio de Hero y Ubicación */
+.hero{
+    background-image: url("../img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Agregamos para demostar modelo de caja y quitarlo mas adelante*/
+    height: 45rem;
+    /* padding: 20px; */
+    position: relative;
+
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0 0 0 / 0.5); */
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
